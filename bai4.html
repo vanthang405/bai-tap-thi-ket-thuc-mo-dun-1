@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<canvas id="mycanvas" width="200" height="100" style="border : 3px solid #000000;"></canvas>
+<script>
+    function Rectangle(lenght, width, acreage, perimeter) {
+        this.length = lenght;
+        this.width = width;
+        this.acreage = acreage;
+        this.perimeter = perimeter;
+        this.getacreage = function () {
+            return (this.length * this.width);
+        };
+        this.getperimeter = function () {
+            return ((this.length + this.width) * 2);
+        };
+    }
+    let hcn = new Rectangle(10, 10);
+    let dientich = hcn.getacreage();
+    let chuvi = hcn.getperimeter();
+    document.write("<br/>"+"Dien tich hinh chu nhat la: " + hcn.getacreage());
+    document.write("<br/>"+"Chu vi hinh chu nhat la : " + hcn.getperimeter());
+    let vecanvans = document.getElementById("Mycanvas");
+    let hinhcn = vecanvans.getContext("2d");
+    hinhcn.fillStyle = "#1e1313";
+    hinhcn.fillRect(10,10,200,100);
+</script>
+</body>
+</html>
